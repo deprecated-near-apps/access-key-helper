@@ -1,28 +1,10 @@
-# Live App Review 1 - App Access Keys
+# Access Key Helper
 
-This repo is a companion to this video:
+# TLDR - use case;
 
-[![Live App Review 1 - App Access Keys](https://img.youtube.com/vi/dT99JLpO2Q8/0.jpg)](https://www.youtube.com/watch?v=dT99JLpO2Q8)
+You want to create accounts for a user and handle their first transactions with the contracts that you have also created (e.g. NFTs, marketplaces).
 
-
-# Feedback (TODO)
-
-Will there be an option to test / run app against a contract that is long lived on testnet?
-Use case: shared data sets, more testability, better starting point
-Separate script for shared namespace
-
-Server should include warning if config loaded is not current dev account, ping dev folder and crash and restart
-
-Step by step high level (matching what's in the frontend)
-
-Better installation guide / step by
-
-Question: why create brand new dev accounts every time? Why not have a consistent namespace for your app? Destroy / RE-create same name.
-Answer: dev accounts for rapid iteration, then deploy to serious name (accidental deploy over existing account?)
-
-Kitchen Sink
-npm library for near dev build scripts and utils???
-
+For each user you create, you need to be able to add/delete access keys, with receiver_id of your subaccounts (that may be created in the future). 
 
 ## Installation
 
