@@ -6,6 +6,10 @@ You want to create accounts for a user and handle their first transactions with 
 
 For each user you create, you need to be able to add/delete access keys, with receiver_id of your subaccounts (that may be created in the future). 
 
+You can only add/delete access keys that have receiver_id that is subaccount of owner_id of contract. You cannot update owner_id of this contract after deployment, so it's secure for user.
+
+Worst case is bad actor gets the master access key for a user, and can add access keys to approve sale of NFT for "0" for the various subaccounts of owner_id; but nothing else happens to user account outside of the subaccounts of owner_id.
+
 ## Installation
 
 Beyond having npm and node (latest versions), you should have Rust installed. I recommend nightly because living on the edge is fun.
